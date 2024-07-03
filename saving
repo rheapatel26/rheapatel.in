@@ -1,0 +1,115 @@
+body{
+    background-image: url("assets/images/bg3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* fonts */
+
+.montserrat{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+.head-div p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 8vw;
+    padding-left: 2vw;
+}
+#typewritter {
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    content: '.';
+    overflow: hidden;
+    animation: typing 3.5s steps(20, end), blink-caret .75s step-end infinite;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: calc(100% + .15em); 
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+  
+/* side nav bar */
+.side-navbar{
+    display: block;
+    position: fixed;
+    font-family: "Montserrat", sans-serif;
+    float: right;
+    padding-right: 2vw;
+    margin-top: -5vw;
+    right: 1vw;
+    transition: right 0.3s ease; 
+    animation: slideInRight 2s forwards;
+    text-decoration: none;
+}
+
+.side-navbar p {
+    color: black;
+}
+
+@keyframes slideInRight {
+    from {
+        right: -300px; 
+    }
+    to {
+        right: 1vw; 
+    }
+}
+
+.self-info {
+    display: inline-flex;
+    margin-left: 2.5vw;
+    margin-top: -20vw;
+    font-family: "Montserrat", sans-serif;
+    animation: topslide 1s forwards; /* Animation properties */
+    position: relative; /* Positioning is required for 'top' property to work */
+}
+
+.self-info-detail {
+    margin-left: 4vw;
+}
+
+@keyframes topslide {
+    from {
+        top: -100px;
+        color: transparent; /* Starting position outside the viewport */
+    }
+    to {
+        top: 1vw; /* Final position after animation (adjust as needed) */
+    }
+}
+
+
+/* Media Query for Phones */
+@media (max-width: 768px) {
+    .head-div p {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+    .side-navbar{
+        font-size: 3vw;
+    }
+    .self-info {
+        font-size: 3vw; /* Positioning is required for 'top' property to work */
+    }
+    
+}
