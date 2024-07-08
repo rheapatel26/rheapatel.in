@@ -16,18 +16,35 @@
 </head>
 
 <body>
+    <div class="cursor"></div>
     <hr style="margin-top: 2vw;">
     <div class="head-div">
         <p id="typewriter">Rhea Patel</p>
     </div>
     <div class="side-navbar">
-        <div> <a href="" style="text-decoration: none;"><p>About</p> </a><hr></div>
-        <div> <a href="" style="text-decoration: none;"><p>Projects</p></a><hr></div>
-        <div> <a href="" style="text-decoration: none;"><p>Resume</p></a><hr></div>
-        <div> <a href="" style="text-decoration: none;"><p>Contact</p></a><hr></div>
+        <div> <a href="" style="text-decoration: none;">
+                <p>About</p>
+            </a>
+            <hr>
+        </div>
+        <div> <a href="" style="text-decoration: none;">
+                <p>Projects</p>
+            </a>
+            <hr>
+        </div>
+        <div> <a href="" style="text-decoration: none;">
+                <p>Resume</p>
+            </a>
+            <hr>
+        </div>
+        <div> <a href="" style="text-decoration: none;">
+                <p>Contact</p>
+            </a>
+            <hr>
+        </div>
     </div>
     <div class="self-info">
-        <div class="self-info-detail"> 
+        <div class="self-info-detail">
             <p>Innovator</p>
             <img src="assets\images\arrowbg.png" alt="" class="sqrbg">
             <hr>
@@ -40,14 +57,21 @@
         <div class="self-info-detail">
             <p>Empower</p>
             <img src="assets\images\arrowbg.png" alt="" class="sqrbg" style="margin-left: 23.3vw;">
-            <hr>    
+            <hr>
         </div>
     </div>
-    
+
     <br><br><br><br><br><br><br><br><br><br><br><br>
     <hr>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
+
+    <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        })
+    </script>
 </body>
 
 </html>

@@ -5,6 +5,7 @@ body {
     background-position: center;
     margin: 0;
     padding: 0;
+    cursor: none;
 }
 
 /* fonts */
@@ -102,6 +103,17 @@ body {
     opacity: 0.3;
     top: -3vw;
     animation: topslidelogo 2.1s forwards;
+}
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #8EAFE1;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
 @keyframes topslide {
