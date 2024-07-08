@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url("assets/images/bg3.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,25 +9,24 @@ body{
 
 /* fonts */
 
-.montserrat{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
 }
 
-
-.head-div p{
+.head-div p {
     font-family: "Montserrat", sans-serif;
     font-size: 8vw;
     padding-left: 2vw;
 }
+
 #typewriter {
-    border-right: 0.04em solid orange;
+    border-right: 0.04em solid black;
     white-space: nowrap;
     content: '.';
     overflow: hidden;
-    animation: typing 3.5s steps(20, end) infinite , blink-caret .75s step-end infinite;git 
+    animation: typing 3.5s steps(20, end) infinite, blink-caret .75s step-end infinite;
 }
-
 
 @keyframes typing {
     from {
@@ -35,12 +34,14 @@ body{
     }
 
     to {
-        width: calc(100% + .15em); 
+        width: calc(100% + .15em);
     }
 }
 
 @keyframes blink-caret {
-    from, to {
+
+    from,
+    to {
         border-color: transparent;
     }
 
@@ -48,17 +49,17 @@ body{
         border-color: black;
     }
 }
-  
+
 /* side nav bar */
-.side-navbar{
+.side-navbar {
     display: block;
     position: fixed;
     font-family: "Montserrat", sans-serif;
     float: right;
     padding-right: 2vw;
-    margin-top: -1vw;
+    margin-top: -14vw;
     right: 1vw;
-    transition: right 0.3s ease; 
+    transition: right 0.3s ease;
     animation: slideInRight 2s forwards;
     text-decoration: none;
 }
@@ -69,11 +70,12 @@ body{
 
 @keyframes slideInRight {
     from {
-        right: -300px; 
+        right: -300px;
         color: transparent;
     }
+
     to {
-        right: 1vw; 
+        right: 1vw;
     }
 }
 
@@ -83,15 +85,17 @@ body{
     margin-left: 2vw;
     margin-top: -5vw;
     font-family: "Montserrat", sans-serif;
-    animation: topslide 2s forwards; /* Animation properties */
-    position: relative; /* Positioning is required for 'top' property to work */
+    animation: topslide 2s forwards;
+    /* Animation properties */
+    position: relative;
+    /* Positioning is required for 'top' property to work */
 }
 
 .self-info-detail {
     margin-left: 6vw;
 }
 
-.sqrbg{
+.sqrbg {
     width: 6vw;
     position: absolute;
     left: 5.8vw;
@@ -103,19 +107,26 @@ body{
 @keyframes topslide {
     from {
         top: -10px;
-        color: transparent; /* Starting position outside the viewport */
+        color: transparent;
+        /* Starting position outside the viewport */
     }
+
     to {
-        top: 1vw; /* Final position after animation (adjust as needed) */
+        top: 1vw;
+        /* Final position after animation (adjust as needed) */
     }
 }
+
 @keyframes topslidelogo {
     from {
         top: 0px;
-        color: transparent; /* Starting position outside the viewport */
+        color: transparent;
+        /* Starting position outside the viewport */
     }
+
     to {
-        top: 1-1vw; /* Final position after animation (adjust as needed) */
+        top: 1-1vw;
+        /* Final position after animation (adjust as needed) */
     }
 }
 
@@ -123,21 +134,32 @@ body{
 /* Media Query for Phones */
 @media (max-width: 768px) {
     .head-div p {
-        font-size: 12vw; /* Increase font size for smaller screens */
+        font-size: 12vw;
+        /* Increase font size for smaller screens */
     }
+
     .side-navbar {
-        font-size: 2.5vw; /* Adjust font size for side navbar */
-        top: 10vw; /* Adjust top position for smaller screens */
+        font-size: 2.5vw;
+        /* Adjust font size for side navbar */
+        top: 20vw;
+        /* Adjust top position for smaller screens */
     }
+
     .self-info {
-        font-size: 3.5vw; /* Adjust font size for self-info section */
-        margin-top: -10vw; /* Adjust margin for self-info section */
+        font-size: 3.5vw;
+        /* Adjust font size for self-info section */
+        margin-top: -10vw;
+        /* Adjust margin for self-info section */
+        margin-left: -2vw;
     }
+
     /* need to adjust the gap between the 3 pictures */
     .sqrbg {
-        width: 12vw; /* Adjust size for smaller screens */
+        /* width: 12vw; /* Adjust size for smaller screens */
         left: calc(50% - 25vw);
-        height: 10vw; /* Adjust position for smaller screens */
-        top: -5vw; 
+        height: 10vw;
+        /* Adjust position for smaller screens */
+        top: -5vw;
+        opacity: 0;
     }
 }
